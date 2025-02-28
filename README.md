@@ -69,7 +69,7 @@ Implement a real-time ML streaming pipeline in Databricks to predict temperature
 🤝 Contributing:
 Feel free to fork this repository, open issues, or submit PRs to improve the pipeline.
 
-📝 License
+📝 License:
 This project is licensed under the MIT License.
 
 📩 Author: Banu Vinay
