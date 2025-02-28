@@ -21,7 +21,7 @@ def on_connect(client, userdata, flags, rc):
 
 # Callback when disconnected from IoT Hub
 def on_disconnect(client, userdata, rc):
-    print("🔄 Disconnected! Attempting reconnect...")
+    print("Disconnected! Attempting reconnect...")
     try:
         client.reconnect()
     except Exception as e:
@@ -92,7 +92,7 @@ while True:
     # Publish each message in the batch
     for data in sensor_data_batch:
         message = json.dumps(data)
-        print(f"📤 Publishing: {message}")
+        print(f"Publishing: {message}")
 
         result = client.publish(f"devices/{DEVICE_ID}/messages/events/", message, qos=1)
 
