@@ -52,7 +52,7 @@ Deploy an Azure Function to trigger alerts based on ADX query results.
 6️⃣ Real-Time Machine Learning for Anomaly Detection
 Implement a real-time ML streaming pipeline in Databricks to predict temperature spikes.
 
-📊 Features & Enhancements
+📊 Features & Enhancements:
 ✔️ Real-time IoT Data Ingestion & Processing
 ✔️ Low-Latency Querying using ADX
 ✔️ Live Monitoring in Grafana
@@ -61,12 +61,12 @@ Implement a real-time ML streaming pipeline in Databricks to predict temperature
 ✔️ Terraform-based Infrastructure Deployment
 ✔️ Fully Azure-Native Streaming Stack
 
-📖 Future Enhancements
+📖 Future Enhancements:
 🔹 Edge Computing using Azure IoT Edge for local data processing.
 🔹 Advanced AI-Based Anomaly Detection using Databricks ML models.
 🔹 CI/CD for automated deployment via Azure DevOps Pipelines.
 
-🤝 Contributing
+🤝 Contributing:
 Feel free to fork this repository, open issues, or submit PRs to improve the pipeline.
 
 📝 License
