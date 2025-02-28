@@ -1,0 +1,4 @@
+AzureDiagnostics
+| where ResourceType == "IOTHUBS"
+| where temperature > 50
+| project TimeGenerated, DeviceId, temperature

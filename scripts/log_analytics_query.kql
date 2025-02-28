@@ -1,0 +1,4 @@
+AzureDiagnostics
+| where ResourceType == "IOTHUBS"
+| project TimeGenerated, DeviceId, temperature, humidity, pressure
+| order by TimeGenerated desc
