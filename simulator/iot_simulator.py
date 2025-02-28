@@ -15,9 +15,9 @@ MQTT_PORT = 8883
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
-        print("✅ Connected to Azure IoT Hub via MQTT!")
+        print("Connected to Azure IoT Hub via MQTT!")
     else:
-        print(f"❌ Connection failed with error code {rc}")
+        print(f"Connection failed with error code {rc}")
 
 # Callback when disconnected from IoT Hub
 def on_disconnect(client, userdata, rc):
@@ -25,7 +25,7 @@ def on_disconnect(client, userdata, rc):
     try:
         client.reconnect()
     except Exception as e:
-        print(f"❌ Reconnection failed: {e}")
+        print(f"Reconnection failed: {e}")
 
 # Initialize MQTT client
 client = mqtt.Client(client_id=DEVICE_ID, protocol=mqtt.MQTTv311)
@@ -79,9 +79,9 @@ def simulate_downtime():
     if random.random() < 0.01:  # 1% chance every loop (~every few hours)
         downtime_duration = random.randint(60, 300)  # 1 to 5 minutes
         last_failure_time = time.time()  # Update last failure time
-        print(f"💥 SYSTEM FAILURE! No data for {downtime_duration} seconds... Cooling down.")
+        print(f"SYSTEM FAILURE! No data for {downtime_duration} seconds... Cooling down.")
         time.sleep(downtime_duration)  # Sleep for downtime duration
-        print("✅ System Recovered. Resuming data transmission.")
+        print("System Recovered. Resuming data transmission.")
 
 # Publish Sensor Data with Reduced Downtime Frequency
 while True:
@@ -98,6 +98,6 @@ while True:
 
         # Check if publish was successful
         if result.rc != mqtt.MQTT_ERR_SUCCESS:
-            print(f"⚠️ Publish failed: {result.rc}")
+            print(f"Publish failed: {result.rc}")
 
     time.sleep(1)  # Keep total rate ~3-4 rows per second
